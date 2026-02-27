@@ -2,8 +2,8 @@
 
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useEntranceState } from '@/lib/use-entrance-state';
-import { useReducedMotion } from '@/lib/use-reduced-motion';
+import { useEntranceState } from '@/hooks/use-entrance-state';
+import { useReducedMotion } from '@/hooks/use-reduced-motion';
 import { siteContent } from '@/lib/content-config';
 import { GoldEnergyCanvas } from './gold-energy-canvas';
 

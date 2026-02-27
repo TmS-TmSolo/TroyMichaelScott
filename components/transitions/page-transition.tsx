@@ -3,7 +3,7 @@
 import React, { createContext, useContext, useState, useCallback, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter, usePathname } from 'next/navigation';
-import { useLiteMode } from '@/lib/use-reduced-motion';
+import { useLiteMode } from '@/hooks/use-reduced-motion';
 
 type TransitionType = 'door' | 'portal' | 'fade' | 'book';
 

@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { LibraryScene } from '@/components/library-scene';
 import { SiteHeader } from '@/components/site-header';
 import { SiteFooter } from '@/components/site-footer';
-import { useEntranceState } from '@/lib/use-entrance-state';
+import { useEntranceState } from '@/hooks/use-entrance-state';
 import { siteContent } from '@/lib/content-config';
 import { TransitionLink } from '@/components/transitions';
 import { BookOpen, ExternalLink, Sparkles } from 'lucide-react';

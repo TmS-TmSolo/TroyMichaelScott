@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { siteContent, Chapter, PageContent } from '@/lib/content-config';
-import { useLiteMode } from '@/lib/use-reduced-motion';
+import { useLiteMode } from '@/hooks/use-reduced-motion';
 import { PageSpread } from './page-spread';
 import { ChapterDivider } from './chapter-divider';
 import { BookNavigation, ChapterProgress } from './book-navigation';

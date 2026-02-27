@@ -6,7 +6,7 @@ import { LibraryScene } from '@/components/library-scene';
 import { SiteHeader } from '@/components/site-header';
 import { SiteFooter } from '@/components/site-footer';
 import { NewsletterSignup } from '@/components/newsletter-signup';
-import { useEntranceState } from '@/lib/use-entrance-state';
+import { useEntranceState } from '@/hooks/use-entrance-state';
 import { siteContent } from '@/lib/content-config';
 import { TransitionLink } from '@/components/transitions';
 import Image from 'next/image';

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
-import { useLiteMode } from '@/lib/use-reduced-motion';
+import { useLiteMode } from '@/hooks/use-reduced-motion';
 
 export function LibraryBackground() {
   const liteMode = useLiteMode();

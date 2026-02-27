@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useRef, useEffect, useCallback } from 'react';
-import { useLiteMode } from '@/lib/use-reduced-motion';
+import { useLiteMode } from '@/hooks/use-reduced-motion';
 
 interface ThoughtParticle {
   x: number;

@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { TransitionLink } from '@/components/transitions';
-import { useEntranceState } from '@/lib/use-entrance-state';
+import { useEntranceState } from '@/hooks/use-entrance-state';
 import { Menu, X, BookOpen } from 'lucide-react';
 
 const navLinks = [

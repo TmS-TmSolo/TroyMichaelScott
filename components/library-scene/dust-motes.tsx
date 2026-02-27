@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { useLiteMode } from '@/lib/use-reduced-motion';
+import { useLiteMode } from '@/hooks/use-reduced-motion';
 
 interface Mote {
   id: number;

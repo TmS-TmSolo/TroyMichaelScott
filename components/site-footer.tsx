@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { TransitionLink } from '@/components/transitions';
-import { useEntranceState } from '@/lib/use-entrance-state';
+import { useEntranceState } from '@/hooks/use-entrance-state';
 import { siteContent } from '@/lib/content-config';
 
 export function SiteFooter() {

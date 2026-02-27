@@ -1,11 +1,10 @@
 {
   "compilerOptions": {
-    "target": "es2020",
+    "target": "es2017",
     "lib": [
       "dom",
       "dom.iterable",
-      "es5",
-      "es2020"
+      "esnext"
     ],
     "allowJs": true,
     "skipLibCheck": true,
@@ -18,23 +17,27 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
+    "types": [
+      "node"
     ],
+    "baseUrl": ".",
     "paths": {
       "@/*": [
         "./*"
       ]
-    }
+    },
+    "forceConsistentCasingInFileNames": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts",
-    ".build/types/**/*.ts"
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"

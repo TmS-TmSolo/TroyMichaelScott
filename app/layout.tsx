@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import React from 'react';
 import { ThemeProvider } from '@/components/theme-provider';
 import { PageTransitionProvider } from '@/components/transitions';
 import { ThoughtParticles } from '@/components/ambient';

@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useRef, useEffect, useCallback } from 'react';
+import { usePathname } from 'next/navigation';
 import { useLiteMode } from '@/hooks/use-reduced-motion';
 
 interface ThoughtParticle {
@@ -26,6 +27,7 @@ export function ThoughtParticles() {
   const particlesRef = useRef<ThoughtParticle[]>([]);
   const animationRef = useRef<number>(0);
   const liteMode = useLiteMode();
+  const pathname = usePathname();
 
   const createParticle = useCallback((canvas: HTMLCanvasElement): ThoughtParticle => {
     const hasText = Math.random() < 0.15; // 15% chance to be a thought word
@@ -112,7 +114,7 @@ export function ThoughtParticles() {
     };
   }, [animate]);
 
-  if (liteMode) return null;
+  if (liteMode || pathname === '/chapters') return null;
 
   return (
     <canvas

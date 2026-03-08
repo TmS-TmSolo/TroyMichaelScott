@@ -175,11 +175,11 @@ export default function SpeakingPage() {
                   For podcast appearances, conferences, or speaking engagements, please reach out directly.
                 </p>
                 <a 
-                  href="mailto:troy@trymysoul.com"
+                  href="mailto:iam@troymichaelscott.com"
                   className="inline-flex items-center gap-2 px-6 py-3 border border-gold/40 text-gold hover:bg-gold/10 transition-all font-serif text-sm rounded"
                 >
                   <Mail className="w-4 h-4" />
-                  troy@trymysoul.com
+                  iam@troymichaelscott.com
                 </a>
               </div>
             </motion.div>

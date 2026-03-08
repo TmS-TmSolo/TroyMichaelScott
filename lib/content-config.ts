@@ -50,12 +50,22 @@ export interface SiteContent {
     tagline: string;
     welcomeText: string;
   };
+  iAmTroy: {
+    tagline: string;
+    description: string;
+    pillars: Array<{ label: string; description: string }>;
+  };
+  tryMySoul: {
+    tagline: string;
+    description: string;
+  };
   chapters: Chapter[];
   book: BookConfig;
   bookRecommendations: BookRecommendation[];
   newsletter: {
     headline: string;
     description: string;
+    footerNote: string;
     buttonText: string;
     placeholder: string;
   };
@@ -75,7 +85,20 @@ export const siteContent: SiteContent = {
   },
   library: {
     tagline: 'Chapters of My Life.',
-    welcomeText: 'Welcome to my library. Here you will find the collected thoughts, investigations, and stories that have shaped my understanding of consciousness, reality, and what it means to be aware.',
+    welcomeText: 'These are the collected books, investigations, and ideas of an author working through the hard questions. Consciousness, intelligence, the structure of reality — none of it is settled. You are welcome to explore, read, and think alongside.',
+  },
+  iAmTroy: {
+    tagline: 'The Current Series',
+    description: 'The books are the center. I Am Troy is the investigation made visible — videos, essays, and conversations on consciousness, AI, and the philosophy of identity, developed in the open as the ideas take shape.',
+    pillars: [
+      { label: 'Videos', description: 'Long-form explorations of ideas from the books and the broader investigation.' },
+      { label: 'Essays', description: 'Written pieces developing arguments from The Inner Physics Series and adjacent work.' },
+      { label: 'Debates', description: 'Conversations with thinkers who push back on the ideas.' },
+    ],
+  },
+  tryMySoul: {
+    tagline: 'The Philosophical Foundation',
+    description: 'The long-term platform behind the work. A sustained inquiry into consciousness, human development, and the questions that require years — not episodes — to answer properly.',
   },
   chapters: [
     {
@@ -139,24 +162,22 @@ This is not a rejection of science. It is a demand that science follow its own e
     {
       id: 'chapter-2',
       number: 2,
-      title: 'Try My Soul',
-      subtitle: 'The Platform',
+      title: 'I Am Troy',
+      subtitle: 'The Active Work',
       pages: [
         {
           id: 'ch2-1',
-          title: 'The Mission',
-          content: `Try My Soul is the umbrella platform for my writing, research, and media. Founded in the mid-2020s, its purpose is simple:
+          title: 'The Current Series',
+          content: `I Am Troy is the active series — the current vehicle for exploration. It is where ideas are tested in real time: through videos, essays, and debates on consciousness, AI, identity, and the questions that refuse to stay quiet.
 
-To model careful thinking in an age of certainty inflation.
-
-The platform focuses on consciousness, AI and human identity, cultural drift and truth-seeking, systems thinking, and intellectual humility without intellectual passivity.`,
+This is not a finished argument. It is a live investigation.`,
         },
         {
           id: 'ch2-2',
-          title: 'Not Motivation',
-          content: `Try My Soul is not motivational content. It is an investigation platform.
+          title: 'Try My Soul',
+          content: `Behind the active work sits Try My Soul — the philosophical foundation and the long-term project. It is the deeper architecture: a sustained inquiry into consciousness, human development, and the structural questions that require years, not episodes, to answer.
 
-We explore the boundaries of what we know and what we assume. We sit with difficult questions without rushing to premature conclusions. We take seriously the possibility that our most fundamental assumptions about reality may need revision.`,
+Try My Soul is not motivational content. It is not a platform for quick conclusions. It is the place where the investigation goes when it needs to go further than a video allows.`,
         },
       ],
     },
@@ -253,14 +274,15 @@ No equation captures it. No instrument detects it. No model explains why experie
     },
   ],
   newsletter: {
-    headline: 'If you want the chapters as they\'re written—join the list.',
-    description: 'Receive early drafts, research notes, and announcements directly.',
+    headline: 'Join the Investigation.',
+    description: 'The questions that shape our lives rarely arrive with clean answers. Through Try My Soul Letters, I share the ideas, books, and discoveries shaping my current thinking — often before they become essays or chapters.',
+    footerNote: '1–2 letters per week. No noise. Only ideas worth exploring.',
     buttonText: 'Subscribe',
     placeholder: 'your@email.com',
   },
   meta: {
     siteTitle: 'Troy Michael Scott | Author & Systems Thinker',
-    siteDescription: 'Author of The Inner Physics of Our Mind. Exploring consciousness, technology, and the questions science quietly avoids.',
+    siteDescription: 'Author of The Inner Physics of Our Mind. Creator of I Am Troy. Exploring consciousness, identity, and the questions science quietly avoids.',
     author: 'Troy Michael Scott',
     ogImage: '/images/og-image.jpg',
   },

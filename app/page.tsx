@@ -14,7 +14,48 @@ import { TransitionLink } from '@/components/transitions';
 import Image from 'next/image';
 import { BookOpen, Library, Sparkles, Brain, Compass, PenTool } from 'lucide-react';
 
-export default function HomePage() {
+const TEMP_LANDING = true;
+
+function TemporaryLandingPage() {
+  return (
+    <main className="relative min-h-screen overflow-hidden bg-[#050505] flex items-center justify-center px-6">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(120,90,20,0.12),transparent_35%),linear-gradient(to_bottom,#050505,#090909_45%,#040404)]" />
+
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div className="relative w-[min(72vw,420px)] aspect-square">
+          {/* Gold smoke */}
+          <div className="absolute -inset-16 rounded-full blur-3xl opacity-30 bg-[radial-gradient(circle,rgba(212,175,55,0.35),transparent_65%)] animate-pulse" />
+          <div className="absolute -left-10 top-10 w-72 h-40 rounded-full blur-3xl opacity-20 bg-[radial-gradient(circle,rgba(255,210,120,0.22),transparent_70%)]" />
+          <div className="absolute -right-8 bottom-6 w-72 h-40 rounded-full blur-3xl opacity-20 bg-[radial-gradient(circle,rgba(184,134,50,0.2),transparent_70%)]" />
+
+          {/* Black box */}
+          <div
+            className="absolute inset-0 bg-black/90 rounded-sm border border-[#3a2d12]/40"
+            style={{
+              boxShadow:
+                '0 0 0 1px rgba(212,175,55,0.08), 0 30px 80px rgba(0,0,0,0.75), inset 0 0 30px rgba(255,255,255,0.02)',
+            }}
+          />
+        </div>
+      </div>
+
+      <div className="relative z-10 max-w-3xl text-center">
+        <p
+          className="text-[#f3efe4] text-[clamp(1.35rem,2.2vw,2.3rem)] leading-[1.7] font-serif"
+          style={{ textShadow: '0 1px 18px rgba(0,0,0,0.65)' }}
+        >
+          The world is moving faster every day.
+          <br />
+          I am building a place to slow down, think clearly, and explore what
+          actually matters.
+        </p>
+      </div>
+    </main>
+  );
+}
+
+
+function RealHomePage() {
   const { hasEntered, setHasEntered } = useEntranceState();
   const reducedMotion = useReducedMotion();
   const [mounted, setMounted] = useState(false);
@@ -373,4 +414,11 @@ function LibraryRoom({ href, icon, title, subtitle, description, transition, del
       </TransitionLink>
     </motion.div>
   );
+}
+
+
+export default function HomePage() {
+  // temporary gate
+  if (TEMP_LANDING) return <TemporaryLandingPage />;
+  return <RealHomePage />;
 }

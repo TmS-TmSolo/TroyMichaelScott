@@ -95,7 +95,7 @@ export default function ChaptersPage() {
       <SiteHeader />
       
       <main className="relative min-h-screen">
-        <LibraryScene>
+        <LibraryScene quiet>
           {/* Header */}
           <motion.div
             className="text-center py-8 px-4"

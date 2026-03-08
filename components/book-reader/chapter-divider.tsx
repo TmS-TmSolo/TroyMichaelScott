@@ -12,7 +12,7 @@ interface ChapterDividerProps {
 export function ChapterDivider({ chapter, isVisible }: ChapterDividerProps) {
   return (
     <motion.div
-      className="relative w-full max-w-5xl mx-auto aspect-[3/2] flex items-center justify-center"
+      className="relative w-full max-w-5xl mx-auto py-20 flex items-center justify-center"
       initial={{ opacity: 0 }}
       animate={{ opacity: isVisible ? 1 : 0 }}
       transition={{ duration: 0.8 }}

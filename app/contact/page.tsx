@@ -104,11 +104,11 @@ export default function ContactPage() {
                   <div className="p-4 border border-gold/10 rounded-sm bg-black/30">
                     <p className="text-gold/60 font-serif text-xs tracking-widest uppercase mb-2">Email</p>
                     <a 
-                      href="mailto:troy@trymysoul.com"
+                      href="mailto:iam@troymichaelscott.com"
                       className="font-serif text-library-paper hover:text-gold transition-colors flex items-center gap-2"
                     >
                       <Mail className="w-4 h-4" />
-                      troy@trymysoul.com
+                      iam@troymichaelscott.com
                     </a>
                   </div>
 

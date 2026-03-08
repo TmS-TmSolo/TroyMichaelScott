@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Youtube } from 'lucide-react';
 import { TransitionLink } from '@/components/transitions';
 import { useEntranceState } from '@/hooks/use-entrance-state';
 import { siteContent } from '@/lib/content-config';
@@ -72,19 +73,28 @@ export function SiteFooter() {
           >
             <h4 className="font-serif text-gold/60 text-sm tracking-widest uppercase mb-4">Connect</h4>
             <div className="space-y-2">
-              <a 
-                href="mailto:troy@trymysoul.com" 
-                className="block font-serif text-library-paper/60 hover:text-gold transition-colors text-sm"
+              <a
+                href="https://youtube.com/@TroyMichaelScott"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 font-serif text-library-paper/60 hover:text-gold transition-colors text-sm"
               >
-                troy@trymysoul.com
+                <Youtube className="w-3.5 h-3.5 flex-shrink-0" />
+                I Am Troy →
               </a>
-              <a 
-                href="https://trymysoul.com" 
-                target="_blank" 
+              <a
+                href="https://trymysoul.com"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="block font-serif text-library-paper/60 hover:text-gold transition-colors text-sm"
               >
                 Try My Soul →
+              </a>
+              <a
+                href="mailto:iam@troymichaelscott.com"
+                className="block font-serif text-library-paper/60 hover:text-gold transition-colors text-sm"
+              >
+                iam@troymichaelscott.com
               </a>
             </div>
           </motion.div>

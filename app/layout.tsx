@@ -7,21 +7,52 @@ import { siteContent } from '@/lib/content-config';
 import './globals.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://troymichaelscott.com'),
-  title: siteContent.meta.siteTitle,
-  description: siteContent.meta.siteDescription,
-  keywords: ['consciousness', 'philosophy', 'mind', 'science', 'Troy Michael Scott', 'Inner Physics'],
-  authors: [{ name: siteContent.meta.author }],
+  metadataBase: new URL('https://www.troymichaelscott.com'),
+  title: {
+    default: 'Troy Michael Scott | Author, Thinker, and Builder',
+    template: '%s | Troy Michael Scott',
+  },
+  description:
+    'Official site of Troy Michael Scott — essays, books, videos, and ideas on AI, consciousness, technology, and human meaning.',
+  keywords: [
+    'Troy Michael Scott',
+    'author',
+    'consciousness',
+    'philosophy',
+    'AI',
+    'technology',
+    'human meaning',
+    'Inner Physics',
+    'systems thinker',
+  ],
+  authors: [{ name: 'Troy Michael Scott' }],
+  creator: 'Troy Michael Scott',
+  publisher: 'Troy Michael Scott',
+  alternates: {
+    canonical: 'https://www.troymichaelscott.com',
+  },
   openGraph: {
-    title: siteContent.meta.siteTitle,
-    description: siteContent.meta.siteDescription,
-    images: [siteContent.meta.ogImage],
+    title: 'Troy Michael Scott | Author, Thinker, and Builder',
+    description:
+      'Essays, books, videos, and ideas on AI, consciousness, technology, and human meaning.',
+    url: 'https://www.troymichaelscott.com',
+    siteName: 'Troy Michael Scott',
+    images: [
+      {
+        url: siteContent.meta.ogImage,
+        width: 1200,
+        height: 630,
+        alt: 'Troy Michael Scott',
+      },
+    ],
+    locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: siteContent.meta.siteTitle,
-    description: siteContent.meta.siteDescription,
+    title: 'Troy Michael Scott | Author, Thinker, and Builder',
+    description:
+      'Essays, books, videos, and ideas on AI, consciousness, technology, and human meaning.',
     images: [siteContent.meta.ogImage],
   },
   icons: {

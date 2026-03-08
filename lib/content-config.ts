@@ -281,7 +281,7 @@ No equation captures it. No instrument detects it. No model explains why experie
     placeholder: 'your@email.com',
   },
   meta: {
-    siteTitle: 'Troy Michael Scott | Author & Systems Thinker',
+    siteTitle: 'Troy Michael Scott | Author, Thinker, and Builder',
     siteDescription: 'Author of The Inner Physics of Our Mind. Creator of I Am Troy. Exploring consciousness, identity, and the questions science quietly avoids.',
     author: 'Troy Michael Scott',
     ogImage: '/images/og-image.jpg',

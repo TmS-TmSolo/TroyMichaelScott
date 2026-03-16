@@ -264,32 +264,82 @@ function RealHomePage() {
                     <div className="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-transparent" />
                     
                     <div className="relative grid md:grid-cols-2 gap-8 items-center">
-                      {/* Book Cover */}
-                      <div className="relative aspect-[2/3] max-w-xs mx-auto">
-                        <div className="absolute inset-0 translate-x-3 translate-y-3 bg-black/40 blur-xl rounded" />
-                        <motion.div
-                          className="relative rounded overflow-hidden shadow-book"
-                          whileHover={{ scale: 1.02, rotateY: 3 }}
-                          transition={{ duration: 0.3 }}
-                          style={{ transformStyle: 'preserve-3d' }}
-                        >
-                          <Image
-                            src={siteContent.book.coverImage}
-                            alt={siteContent.book.title}
-                            fill
-                            className="object-cover"
-                            priority
-                          />
-                        </motion.div>
-                        <div className="absolute -top-2 -right-2 bg-gold text-library-ink text-xs font-serif px-3 py-1 rounded shadow-lg">
-                          Available Now
-                        </div>
-                      </div>
+                     {/* Book Cover */}
+<div className="relative w-full max-w-xs mx-auto">
+  <div className="relative w-full aspect-[2/3]">
+    <div className="absolute inset-0 translate-x-3 translate-y-3 bg-black/40 blur-xl rounded" />
+    <motion.div
+      className="relative w-full h-full rounded overflow-hidden shadow-book"
+      whileHover={{ scale: 1.02, rotateY: 3 }}
+      transition={{ duration: 0.3 }}
+      style={{ transformStyle: 'preserve-3d' }}
+    >
+      <Image
+        src={siteContent.book.coverImage}
+        alt={siteContent.book.title}
+        fill
+        className="object-cover"
+        priority
+      />
+    </motion.div>
+    <div className="absolute -top-2 -right-2 bg-gold text-library-ink text-xs font-serif px-3 py-1 rounded shadow-lg">
+      Available Now
+    </div>
+  </div>
+</div>
+{/* Full-Width Thesis Section */}
+<section className="py-28 px-6 border-y border-gold/10 bg-black/70">
+  <motion.div
+    className="max-w-4xl mx-auto text-center"
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 1 }}
+  >
+    <p className="text-gold/50 font-serif text-xs tracking-[0.35em] uppercase mb-6">
+      The Central Question
+    </p>
 
+    <blockquote
+      className="font-serif text-2xl md:text-4xl text-library-paper italic leading-relaxed"
+      style={{ textShadow: '0 2px 18px rgba(0,0,0,0.35)' }}
+    >
+      “{siteContent.book.thesis}”
+    </blockquote>
+
+    <div className="w-24 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent mx-auto my-10" />
+
+    <p className="font-serif text-library-paper/70 max-w-2xl mx-auto leading-relaxed">
+      The Inner Physics Series begins with a simple but unsettling observation:
+      modern science can map the brain in extraordinary detail, yet still cannot
+      explain why any physical process should produce conscious experience at all.
+    </p>
+
+    <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+      <a
+        href="https://iamtroy.gumroad.com/l/innerphysics?wanted=true"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-2 px-6 py-3 bg-gold text-library-ink font-serif text-sm hover:bg-gold-light transition-all duration-300 rounded"
+      >
+        <BookOpen className="w-4 h-4" />
+        Get the Book
+      </a>
+
+      <TransitionLink
+        href="/books/inner-physics-of-our-mind"
+        transition="portal"
+        className="inline-flex items-center gap-2 px-6 py-3 border border-gold/40 text-gold font-serif text-sm hover:bg-gold/10 transition-all duration-300 rounded"
+      >
+        Explore the Book
+      </TransitionLink>
+    </div>
+  </motion.div>
+</section>
                       {/* Book Info */}
                       <div className="space-y-4">
                         <p className="text-gold/60 font-serif text-xs tracking-[0.2em] uppercase">
-                          Now Available
+                          Volume I • The Inner Physics Series
                         </p>
                         <h2 
                           className="font-display text-2xl md:text-3xl text-library-ink"

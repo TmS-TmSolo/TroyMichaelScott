@@ -66,33 +66,33 @@ export default function InnerPhysicsBookPage() {
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 {/* Book Cover */}
                 <motion.div
-                  className="relative max-w-sm mx-auto"
-                  initial={{ opacity: 0, x: -50 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 1, delay: showEntry ? 1 : 0 }}
-                >
-                  <div className="relative aspect-[2/3]">
-                    {/* Shadow */}
-                    <div className="absolute inset-0 translate-x-4 translate-y-4 bg-black/50 blur-2xl rounded" />
-                    
-                    {/* Book */}
-                    <motion.div
-                      className="relative rounded overflow-hidden shadow-2xl"
-                      style={{ transformStyle: 'preserve-3d' }}
-                      whileHover={{ scale: 1.02, rotateY: 5 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <Image
-                        src={book.coverImage}
-                        alt={book.title}
-                        fill
-                        className="object-cover"
-                        priority
-                      />
-                      
-                      {/* Subtle glow */}
-                      <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-gold/5 to-transparent" />
-                    </motion.div>
+  className="relative w-full max-w-sm mx-auto"
+  initial={{ opacity: 0, x: -50 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ duration: 1, delay: showEntry ? 1 : 0 }}
+>
+  <div className="relative w-full aspect-[2/3]">
+    {/* Shadow */}
+    <div className="absolute inset-0 translate-x-4 translate-y-4 bg-black/50 blur-2xl rounded" />
+    
+    {/* Book */}
+    <motion.div
+      className="relative w-full h-full rounded overflow-hidden shadow-2xl"
+      style={{ transformStyle: 'preserve-3d' }}
+      whileHover={{ scale: 1.02, rotateY: 5 }}
+      transition={{ duration: 0.3 }}
+    >
+      <Image
+        src={book.coverImage}
+        alt={book.title}
+        fill
+        className="object-cover"
+        priority
+      />
+
+      {/* Subtle glow */}
+      <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-gold/5 to-transparent" />
+    </motion.div>
 
                     {/* Available now badge */}
                     <motion.div

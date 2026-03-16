@@ -16,7 +16,7 @@ const books = [
     title: 'The Inner Physics of Our Mind',
     subtitle: 'Why the Most Certain Thing You Know Has No Scientific Explanation',
     description: 'The foundational volume exploring the hard problem of consciousness and why the explanatory gap may be a structural limit of third-person explanation.',
-    status: 'pre-order',
+    status: 'available-now',
     cover: '/images/book-cover.png',
     link: '/books/inner-physics-of-our-mind',
   },
@@ -145,7 +145,7 @@ export default function BooksPage() {
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                 >
                   <div className={`relative p-6 md:p-8 border rounded-sm transition-all duration-500 ${
-                    book.status === 'pre-order' 
+                    book.status === 'available-now' 
                       ? 'border-gold/30 bg-black/40' 
                       : 'border-gold/10 bg-black/30'
                   } hover:border-gold/40 hover:bg-black/50`}>
@@ -169,9 +169,9 @@ export default function BooksPage() {
                         )}
                         
                         {/* Status badge */}
-                        {book.status === 'pre-order' && (
+                        {book.status === 'available-now' && (
                           <div className="absolute -top-2 -right-2 bg-gold text-library-ink text-xs font-serif px-2 py-1 rounded">
-                            Pre-Order
+                            Available Now
                           </div>
                         )}
                         {book.status === 'coming-soon' && (

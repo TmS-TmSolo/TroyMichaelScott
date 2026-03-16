@@ -75,13 +75,15 @@ export function SiteHeader() {
             transition={{ delay: 1.1 }}
           >
             <a
-              href="#"
-              className="inline-flex items-center gap-2 px-5 py-2 bg-gold text-library-ink font-serif text-sm
-                         hover:bg-gold-light transition-all duration-300 rounded"
-            >
-              <BookOpen className="w-4 h-4" />
-              Pre-Order
-            </a>
+  href="https://iamtroy.gumroad.com/l/innerphysics?wanted=true"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center gap-2 px-5 py-2 bg-gold text-library-ink font-serif text-sm
+             hover:bg-gold-light transition-all duration-300 rounded"
+>
+  <BookOpen className="w-4 h-4" />
+  Get the Book
+</a>
           </motion.div>
         </div>
 

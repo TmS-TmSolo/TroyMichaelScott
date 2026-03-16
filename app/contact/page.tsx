@@ -115,13 +115,13 @@ export default function ContactPage() {
                   <div className="p-4 border border-gold/10 rounded-sm bg-black/30">
                     <p className="text-gold/60 font-serif text-xs tracking-widest uppercase mb-2">Platform</p>
                     <a 
-                      href="https://trymysoul.com"
+                      href="https://www.youtube.com/@TroyMichaelScott"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="font-serif text-library-paper hover:text-gold transition-colors flex items-center gap-2"
                     >
                       <ExternalLink className="w-4 h-4" />
-                      Try My Soul
+                      I am Troy on YouTube
                     </a>
                   </div>
                 </div>

@@ -14,7 +14,7 @@ import { TransitionLink } from '@/components/transitions';
 import Image from 'next/image';
 import { BookOpen, Library, Sparkles, Brain, Compass, PenTool } from 'lucide-react';
 
-const TEMP_LANDING = true;
+const TEMP_LANDING = false;
 
 function TemporaryLandingPage() {
   return (
@@ -282,14 +282,14 @@ function RealHomePage() {
                           />
                         </motion.div>
                         <div className="absolute -top-2 -right-2 bg-gold text-library-ink text-xs font-serif px-3 py-1 rounded shadow-lg">
-                          Pre-Order
+                          Available Now
                         </div>
                       </div>
 
                       {/* Book Info */}
                       <div className="space-y-4">
                         <p className="text-gold/60 font-serif text-xs tracking-[0.2em] uppercase">
-                          Now Available for Pre-Order
+                          Now Available
                         </p>
                         <h2 
                           className="font-display text-2xl md:text-3xl text-library-ink"

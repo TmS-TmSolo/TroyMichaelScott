@@ -94,14 +94,14 @@ export default function InnerPhysicsBookPage() {
                       <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-gold/5 to-transparent" />
                     </motion.div>
 
-                    {/* Pre-order badge */}
+                    {/* Available now badge */}
                     <motion.div
                       className="absolute -top-3 -right-3 bg-gold text-library-ink font-serif text-sm px-4 py-2 rounded shadow-lg"
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
                       transition={{ delay: showEntry ? 1.5 : 0.5, type: 'spring' }}
                     >
-                      Pre-Order Now
+                      Available Now
                     </motion.div>
                   </div>
                 </motion.div>
@@ -118,7 +118,7 @@ export default function InnerPhysicsBookPage() {
                   </div>
 
                   <p className="text-gold/60 font-serif text-xs tracking-[0.2em] uppercase mb-3">
-                    Volume I • The Inner Physics Series
+                    Volume I • The Inner Physics Series • First Edition
                   </p>
 
                   <h1 
@@ -144,13 +144,13 @@ export default function InnerPhysicsBookPage() {
 
                   <div className="flex flex-wrap gap-4">
                     <a
-                      href={book.amazonLink}
+                      href="https://iamtroy.gumroad.com/l/innerphysics?wanted=true"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 px-8 py-4 bg-gold text-library-ink font-serif hover:bg-gold-light transition-all duration-300 rounded"
                     >
                       <BookOpen className="w-5 h-5" />
-                      Pre-Order on Amazon
+                      Get the Book — $12.99
                       <ExternalLink className="w-4 h-4" />
                     </a>
                     <TransitionLink

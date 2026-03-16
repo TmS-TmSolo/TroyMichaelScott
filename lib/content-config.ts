@@ -27,7 +27,8 @@ export interface BookConfig {
   thesis: string;
   excerpt: string;
   coverImage: string;
-  amazonLink: string;
+  gumroadLink: string;
+  amazonLink?: string;
 }
 
 export interface BookRecommendation {
@@ -207,13 +208,13 @@ Each volume builds upon the last, creating a comprehensive framework for underst
     title: 'The Inner Physics of Our Mind',
     subtitle: 'Why the Most Certain Thing You Know Has No Scientific Explanation',
     author: 'Troy Michael Scott',
-    releaseDate: '2026',
+    releaseDate: 'March 2026',
     thesis: 'The explanatory gap may be a structural limit of third-person explanation.',
     excerpt: `We have mapped the genome. Split the atom. Built machines that can write, reason, and learn. And yet we cannot explain the one thing we experience every moment: consciousness.
 
 No equation captures it. No instrument detects it. No model explains why experience exists at all. In The Inner Physics of Our Mind, Troy Michael Scott confronts the question modern science quietly avoids: What if the failure to explain consciousness is not a technical problem — but a foundational one?`,
     coverImage: '/images/book-cover.png',
-    amazonLink: '#',
+    gumroadLink: 'https://iamtroy.gumroad.com/l/innerphysics?wanted=true',
   },
   bookRecommendations: [
     {

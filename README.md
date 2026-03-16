@@ -107,6 +107,7 @@ book: {
   thesis: 'Your thesis statement...',
   excerpt: 'Book excerpt text...',
   coverImage: '/images/book-cover.png',
+  gumroadLink: 'https://iamtroy.gumroad.com/l/innerphysics?wanted=true',
   amazonLink: 'https://amazon.com/...',
 },
 ```

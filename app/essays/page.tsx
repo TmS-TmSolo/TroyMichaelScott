@@ -9,6 +9,7 @@ import { NewsletterSignup } from '@/components/newsletter-signup';
 import { useEntranceState } from '@/hooks/use-entrance-state';
 import { TransitionLink } from '@/components/transitions';
 import { Sparkles, Brain, Cpu, Search, GraduationCap, Zap } from 'lucide-react';
+import { getAllEssays } from '@/lib/essays';
 
 const themes = [
   { icon: <Brain className="w-6 h-6" />, title: 'Consciousness', description: 'The hard problem and why experience defies explanation.' },
@@ -22,6 +23,7 @@ export default function EssaysPage() {
   const { setHasEntered } = useEntranceState();
   const [showEntry, setShowEntry] = useState(true);
   const [mounted, setMounted] = useState(false);
+  const essays = getAllEssays();
 
   useEffect(() => {
     setMounted(true);
@@ -93,30 +95,49 @@ export default function EssaysPage() {
             </motion.div>
           </section>
 
-          {/* Coming Soon */}
+          {/* Essay Listing */}
           <section className="py-12 px-4">
             <motion.div
-              className="max-w-2xl mx-auto text-center"
+              className="max-w-2xl mx-auto"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <div className="p-8 border border-gold/20 rounded-sm bg-black/40">
-                <p className="text-gold/60 font-serif text-sm tracking-[0.2em] uppercase mb-4">
-                  Coming Soon
-                </p>
-                <p className="font-serif text-library-paper/70 leading-relaxed mb-6">
-                  Shorter works exploring consciousness, AI, epistemology, and the nature of truth. 
-                  Sign up below to be notified when new essays are published.
-                </p>
-                <TransitionLink
-                  href="/books/inner-physics-of-our-mind"
-                  transition="portal"
-                  className="inline-flex items-center gap-2 text-gold hover:text-gold-light transition-colors font-serif text-sm"
-                >
-                  In the meantime, explore the book →
-                </TransitionLink>
+              <div className="space-y-px">
+                {essays.map((essay, index) => (
+                  <motion.div
+                    key={essay.slug}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                  >
+                    <TransitionLink
+                      href={`/essays/${essay.slug}`}
+                      transition="portal"
+                      className="group block py-8 border-b border-gold/10 hover:border-gold/25 transition-colors duration-300"
+                    >
+                      <p className="text-gold/40 font-serif text-xs tracking-[0.2em] uppercase mb-3">
+                        {essay.category} · {essay.date}
+                      </p>
+                      <h2
+                        className="text-library-paper text-xl md:text-2xl leading-snug mb-3
+                          group-hover:text-gold transition-colors duration-300"
+                        style={{ fontFamily: 'Playfair Display, serif', fontWeight: 400 }}
+                      >
+                        {essay.title}
+                      </h2>
+                      <p className="font-serif text-library-paper/50 text-sm leading-relaxed mb-4">
+                        {essay.excerpt}
+                      </p>
+                      <span className="text-gold/50 group-hover:text-gold font-serif text-sm
+                        transition-colors duration-300">
+                        Read →
+                      </span>
+                    </TransitionLink>
+                  </motion.div>
+                ))}
               </div>
             </motion.div>
           </section>

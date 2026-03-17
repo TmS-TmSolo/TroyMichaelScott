@@ -9,6 +9,7 @@ import { Menu, X, BookOpen } from 'lucide-react';
 const navLinks = [
   { href: '/chapters', label: 'Chapters', transition: 'book' as const },
   { href: '/my-library', label: 'My Library', transition: 'door' as const },
+  { href: '/essays', label: 'Essays', transition: 'portal' as const },
   { href: '/books', label: 'Books', transition: 'portal' as const },
   { href: '/about', label: 'About', transition: 'portal' as const },
   { href: '/contact', label: 'Contact', transition: 'portal' as const },
